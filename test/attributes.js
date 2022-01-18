@@ -50,9 +50,9 @@ export default function () {
     });
     setTimeout(function () {
       grid.focus();
-      mousemove(document.body, 10, 48, grid.canvas);
+      mousemove(window, 10, 48, grid.canvas);
       mousedown(grid.canvas, 10, 48);
-      mousemove(document.body, 10, 160, grid.canvas);
+      mousemove(window, 10, 160, grid.canvas);
       mouseup(document.body, 10, 160, grid.canvas);
 
       var cell = grid.getVisibleCellByIndex(0, 0);
@@ -351,9 +351,9 @@ export default function () {
     setTimeout(function () {
       grid.focus();
       marker(grid, 67, 10);
-      mousemove(document.body, 67, 10, grid.canvas);
+      mousemove(window, 67, 10, grid.canvas);
       mousedown(grid.canvas, 67, 10);
-      mousemove(document.body, 140, 10, grid.canvas);
+      mousemove(window, 140, 10, grid.canvas);
       mouseup(document.body, 140, 10, grid.canvas);
       grid.draw();
       grid.addEventListener('click', function (e) {
@@ -450,9 +450,9 @@ export default function () {
     setTimeout(function () {
       grid.focus();
       marker(grid, 10, 32);
-      mousemove(document.body, 10, 29, grid.canvas);
+      mousemove(window, 10, 29, grid.canvas);
       mousedown(grid.canvas, 10, 29);
-      mousemove(document.body, 10, 90, grid.canvas);
+      mousemove(window, 10, 90, grid.canvas);
       mouseup(document.body, 10, 90, grid.canvas);
       grid.draw();
       grid.addEventListener('click', function (e) {
@@ -484,9 +484,9 @@ export default function () {
     });
     setTimeout(function () {
       grid.focus();
-      mousemove(document.body, 10, 29, grid.canvas);
+      mousemove(window, 10, 29, grid.canvas);
       mousedown(grid.canvas, 10, 29);
-      mousemove(document.body, 10, 90, grid.canvas);
+      mousemove(window, 10, 90, grid.canvas);
       setTimeout(function () {
         assertPxColor(grid, 10, 98, c.b, function (err) {
           if (err) {
@@ -583,9 +583,9 @@ export default function () {
       columnHeaderClickBehavior: 'select',
     });
     marker(grid, 60, 12);
-    mousemove(document.body, 60, 12, grid.canvas);
+    mousemove(window, 60, 12, grid.canvas);
     mousedown(grid.canvas, 60, 12);
-    mouseup(document.body, 60, 12, grid.canvas);
+    mouseup(window, 60, 12, grid.canvas);
     done(
       assertIf(
         grid.selectedRows.length !== 3 ||
@@ -604,10 +604,10 @@ export default function () {
       },
     });
     marker(grid, 60, 12);
-    mousemove(document.body, 60, 12, grid.canvas);
+    mousemove(window, 60, 12, grid.canvas);
     mousedown(grid.canvas, 60, 12);
     mouseup(document.body, 60, 12, grid.canvas);
-    mousemove(document.body, 175, 12, grid.canvas);
+    mousemove(window, 175, 12, grid.canvas);
     mousedown(grid.canvas, 175, 12, null, { ctrlKey: true });
     mouseup(document.body, 175, 12);
     done(
